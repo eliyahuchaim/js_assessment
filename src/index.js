@@ -19,7 +19,7 @@ function inputFilter(){
      var html = []
     store.comments.filter(function(comment){
       // debugger
-      if (event.target.value !== "" && comment.content.includes(event.target.value)){
+      if (event.target.value !== 0 && comment.content.includes(event.target.value)){
             html.push(`
           <li>
             ${comment.content}

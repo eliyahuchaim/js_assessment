@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('body').on('click', '.delete-button', function(event){
     comment = event.target
-    debugger
+    // debugger
     Comments.deleteComment(comment)
   })
 
