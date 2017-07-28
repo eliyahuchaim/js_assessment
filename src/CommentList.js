@@ -23,6 +23,7 @@ function createCommentList(){
        </li>
        `
       }).join(" ")
+      // debugger
       render(commentsHMTL, "comments-list")
     }
 

@@ -13,6 +13,7 @@ function createComment(){
       let list = store.commentsList[0]
       let index = store.comments.indexOf(comment)
       store.comments.splice(index, 1)
+      // debugger
       list.listHTML()
     }
   };

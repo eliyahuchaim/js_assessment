@@ -1,6 +1,13 @@
 const comments = []
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  $('body').on('click', '.delete-button', function(event){
+    comment = event.target
+    debugger
+    Comments.deleteComment(comment)
+  })
+
   document.getElementById('comment-form').addEventListener('submit', function(){
     event.preventDefault();
     let comment = document.getElementById('add-comments-input').value
@@ -9,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     list.listHTML()
     // comments.push(comment)
     // render(comments, "comments-list")
-    deleteButtonAction()
+
     inputFilter()
   })
 });
@@ -37,9 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // }
 
 
-function deleteButtonAction(){
-  $('body').on('click', '.delete-button', function(event){
-  	comment = event.target.id
-    Comments.deleteComment(comment)
-  })
-}
+// function deleteButtonAction(){
+//   $('body').on('click', '.delete-button', function(event){
+//     debugger
+//   	comment = event.target.id
+//     Comments.deleteComment(comment)
+//   })
+// }
